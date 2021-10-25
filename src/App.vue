@@ -1,7 +1,9 @@
 <template>
   <div>check cleaning</div>
   <h1 v-show="apiData==4"  class="check">test</h1>
+  <h2 v-for="(name,index) in apiData" v-bind:key="index">{{name}}</h2>
   <!-- <div :id=[read.name]>{{read.name}}</div> -->
+  
 </template>
 
 <script>
@@ -11,11 +13,16 @@ export default {
 
   data(){
     return {
-  apiData:4
+  apiData:['mani','sahar']
     }
   }
 }
-
+// function getData(data) {
+//   fetch('https://jsonplaceholder.typicode.com/todos/1')
+//   .then(response => response.json())
+//   .then(json => data=json)
+  
+// }
 
 </script>
 
