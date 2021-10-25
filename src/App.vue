@@ -1,16 +1,22 @@
 <template>
   <div>check cleaning</div>
-  <h1>test</h1>
+  <h1 v-show="apiData==4"  class="check">test</h1>
+  <!-- <div :id=[read.name]>{{read.name}}</div> -->
 </template>
 
 <script>
 
 export default {
   name: 'App',
-  components: {
-   
+
+  data(){
+    return {
+  apiData:4
+    }
   }
 }
+
+
 </script>
 
 <style>
@@ -21,5 +27,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.check{
+  border: #2c3e50 2px solid;
 }
 </style>
