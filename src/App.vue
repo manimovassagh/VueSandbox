@@ -1,28 +1,27 @@
 <template>
   <div>check cleaning</div>
-  <h1 v-show="apiData==4"  class="check">test</h1>
-  <h2 v-for="(name,index) in apiData" v-bind:key="index">{{name}}</h2>
+  {{ name.last }}
   <!-- <div :id=[read.name]>{{read.name}}</div> -->
-  
+  <Greet></Greet>
+  <h1>{{name.first}}</h1>
 </template>
 
 <script>
 
-export default {
-  name: 'App',
+import Greet from "./components/Greet.vue";
 
-  data(){
+
+export default {
+  name: "App",
+  components: { Greet },
+
+  data() {
     return {
-  apiData:['mani','sahar']
-    }
-  }
-}
-// function getData(data) {
-//   fetch('https://jsonplaceholder.typicode.com/todos/1')
-//   .then(response => response.json())
-//   .then(json => data=json)
-  
-// }
+      name: {first:'mani',last:'movassagh'},
+    };
+  },
+};
+
 
 </script>
 
@@ -35,7 +34,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.check{
+.check {
   border: #2c3e50 2px solid;
 }
 </style>
