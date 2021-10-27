@@ -1,29 +1,17 @@
 <template>
-  <div>check cleaning</div>
-  <h1 v-show="apiData==4"  class="check">test</h1>
-  <h2 v-for="(name,index) in apiData" v-bind:key="index">{{name}}</h2>
-  <!-- <div :id=[read.name]>{{read.name}}</div> -->
-  
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-
-  data(){
-    return {
-  apiData:['mani','sahar']
-    }
+  components: {
+    HelloWorld
   }
 }
-// function getData(data) {
-//   fetch('https://jsonplaceholder.typicode.com/todos/1')
-//   .then(response => response.json())
-//   .then(json => data=json)
-  
-// }
-
 </script>
 
 <style>
@@ -34,8 +22,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-.check{
-  border: #2c3e50 2px solid;
 }
 </style>
